@@ -1,20 +1,20 @@
     //Once you complete a problem, open up Chrome and check the answer in the console.
 
 
-var arr = [10,20,30];
+var arr = [10, 20, 30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item the given array.
 
   //Code Here
 var first = function (arry) {
     return arry[0];
-}
+};
 
 
 //Next problem
 
 
 
-var arr = [40,50,60];
+var arr = [40, 50, 60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item the given array.
 
 
@@ -22,7 +22,7 @@ var arr = [40,50,60];
 
 var last = function (arry) {
     return arr[arr.length - 1];
-}
+};
 
 //Next Problem
 
@@ -32,7 +32,7 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
   //Code Here
 var looper = function (arr) {
-    for (var i=0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
     alert(arr[i]);
     }
 }
@@ -235,5 +235,12 @@ var longest = function (arr1, arr2) {
 
   //Code Here
 var both = function (arr1, arr2) {
-    return arr1.concat(arr2);
+    var bothArray = [];
+    if ( arr1.length < arr2.length) {
+        bothArray = arr1.slice();
+    } else {
+        bothArray = arr2.slice();
+    }
+    return bothArray;
 }
+
