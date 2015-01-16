@@ -1,10 +1,13 @@
-//Once you complete a problem, open up Chrome and check the answer in the console.
+    //Once you complete a problem, open up Chrome and check the answer in the console.
 
 
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item the given array.
 
   //Code Here
+var first = function (arry) {
+    return arry[0];
+}
 
 
 //Next problem
@@ -17,6 +20,9 @@ var arr = [40,50,60];
 
   //Code Here
 
+var last = function (arry) {
+    return arr[arr.length - 1];
+}
 
 //Next Problem
 
@@ -25,7 +31,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
-
+var looper = function (arr) {
+    for (var i=0; i < arr.length; i++) {
+    alert(arr[i]);
+    }
+}
 
 //Next problem
 
@@ -35,7 +45,12 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
-
+var reversedLooper = function (arr) {
+    arr = arr.reverse();
+    for (var i = 0; i < arr.length; i++) {
+        alert(arr[i]);
+    }
+}
 
 //Next Problem
 
@@ -44,7 +59,14 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
-
+var evenFinder = function (arr) { 
+        for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            arr.splice(i, 1);
+            i--;
+        }
+    }
+}
 
 //Next problem
 
@@ -58,6 +80,15 @@ var odds = []
 
 
   //Code Here
+var divider = function (nums, evens, odds) {
+        for (var i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 === 0) {
+            evens.push(nums[i]);
+        } else {
+            odds.push(nums[i]);
+        }
+    }
+}
 
 
 //Next Problem
@@ -70,7 +101,16 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 //Above your given a function that will return a random number between 0 and 30, and an array full or numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
-
+var finder = function(array) {
+    var num = getRandomArbitrary();
+    var flag = false;
+    for ( var i = 0; i < array.length; i++) {
+        if ( array[i] === num) {
+            flag = true;
+        }
+    }
+    return flag;
+}
 
 //Next problem
 
@@ -80,6 +120,12 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
+var reverse = function (str) {
+    str = str.split('');
+    str.reverse();
+    str = str.join('');
+    return str;
+}
 
 
 //Next Problem
@@ -97,6 +143,26 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+var removeItem = function (arr, task) {
+    for ( var i = 0; i < arr.length; i++) {
+        if (task === arr[i]) {
+            arr.splice(i, 1);
+        }
+    }
+};
+
+var addItem = function (arr, task) {
+    var flag = true;
+    for (var i = 0; i < arr.length; i++) {
+        if (task === arr[i]) {
+            flag = false;
+        }
+    };
+    if (flag) {
+        arr.push(task);
+    }
+};
+
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -111,6 +177,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
+var maker = function() {
+    var arr = [];
+    for (var i = 0; i < 215; i++) {
+        arr.push(i+1);
+    }
+    return arr;
+}
 
 
 //Next Problem
@@ -121,6 +194,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
+
+var addTen = function (nums) { 
+    for (var i = 0; i < nums.length; i++) {
+        nums[i] = Number(nums[i]) + 10;
+    }
+}
 
 
 
